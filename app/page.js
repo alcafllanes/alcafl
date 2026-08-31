@@ -41,6 +41,7 @@ export default function HomePage() {
         <div className="trust-line">
           <span className="label">Trusted by</span>
           <div className="trust-names">
+            <span>Bouncing Boxer Co.</span>
             <span>Peco Lab Kft.</span>
             <span>Cloverash Family Trust</span>
             <span>Ecom Capital</span>
@@ -72,8 +73,8 @@ export default function HomePage() {
             <div className="label">Hands on store building and QA</div>
           </div>
           <div className="stat-cell">
-            <div className="num">4</div>
-            <div className="label">Active client partnerships</div>
+            <div className="num">5</div>
+            <div className="label">Featured Shopify and eCommerce engagements</div>
           </div>
         </div>
       </Reveal>
@@ -131,7 +132,9 @@ export default function HomePage() {
         <div className="feature-work-list">
           {featured.map((w) => (
             <Link key={w.id} href={`/work/${w.id}`} className="feature-work-row">
-              <div className="fw-thumb" style={{ background: w.color }} />
+              <div className="fw-thumb">
+                <img src={w.heroImage} alt={w.heroAlt} loading="lazy" />
+              </div>
               <div>
                 <h4>{w.title}</h4>
                 <p>{w.client}, {w.year}</p>

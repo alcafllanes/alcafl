@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder, replace with real project image">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe8f1" />
+      <stop offset="100%" stop-color="#fff4f8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="28" fill="url(#bg)" />
+  <rect x="1" y="1" width="798" height="498" rx="27" fill="none" stroke="#f7cfe1" stroke-width="2" />
+
+  <rect x="220" y="160" width="360" height="180" rx="20" fill="#ffffff" stroke="#f7cfe1" stroke-width="1.5" />
+
+  <circle cx="400" cy="212" r="16" fill="none" stroke="#c26e93" stroke-width="2.5" />
+  <path d="M392 212 h16 M400 204 v16" stroke="#c26e93" stroke-width="2.5" stroke-linecap="round" />
+
+  <text x="400" y="252" text-anchor="middle" font-family="Manrope, sans-serif" font-size="12" font-weight="800" letter-spacing="2" fill="#a2536f">PROJECT SCREENSHOT</text>
+
+  <text x="400" y="280" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700" fill="#1c1417">Replace with real project image</text>
+
+  <text x="400" y="308" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="600" fill="#6b5a61">Evidence slot</text>
+</svg>
