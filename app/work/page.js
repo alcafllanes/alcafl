@@ -26,16 +26,16 @@ export default function WorkPage() {
       <Reveal className="section-block">
         <div className="stat-row">
           <div className="stat-cell">
-            <div className="num">4</div>
-            <div className="label">Store builds and ops projects delivered</div>
+            <div className="num">5</div>
+            <div className="label">Store builds and ops engagements featured</div>
           </div>
           <div className="stat-cell">
             <div className="num">3</div>
             <div className="label">Platforms, Shopify, GemPages and Wix</div>
           </div>
           <div className="stat-cell">
-            <div className="num">100%</div>
-            <div className="label">QA tested before launch</div>
+            <div className="num">Every</div>
+            <div className="label">Build includes a QA pass across devices</div>
           </div>
         </div>
       </Reveal>

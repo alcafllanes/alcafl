@@ -26,7 +26,9 @@ export default function ContactPage() {
           </p>
           <div className="contact-channel">
             <div className="ci-label">Email</div>
-            <div className="ci-value">hello@alcafl.com</div>
+            <div className="ci-value">
+              <a href="mailto:hello@alcafl.com">hello@alcafl.com</a>
+            </div>
           </div>
           <div className="contact-channel">
             <div className="ci-label">Also reachable on</div>
@@ -35,6 +37,10 @@ export default function ContactPage() {
           <div className="contact-channel">
             <div className="ci-label">Typical response time</div>
             <div className="ci-value">Within 24 hours</div>
+          </div>
+
+          <div className="contact-actions">
+            <a href="mailto:hello@alcafl.com" className="cta-btn ghost">Email me directly</a>
           </div>
         </div>
 

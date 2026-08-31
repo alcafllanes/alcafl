@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { workItems } from '@/lib/data';
+import ProjectGallery from '@/components/ProjectGallery';
 
 export function generateStaticParams() {
   return workItems.map((w) => ({ id: w.id }));
@@ -15,6 +16,8 @@ export default function WorkDetailPage({ params }) {
   const w = workItems.find((x) => x.id === params.id);
   if (!w) return notFound();
 
+  const hasPlaceholders = w.gallery?.some((item) => item.status === 'placeholder');
+
   return (
     <div className="page">
       <section className="fx-now">
@@ -26,7 +29,9 @@ export default function WorkDetailPage({ params }) {
         <p style={{ color: 'var(--ink-soft)', marginTop: 16, maxWidth: 560 }}>{w.summary}</p>
       </section>
 
-      <div className="detail-hero-thumb" style={{ background: w.color }} />
+      <div className="detail-hero-thumb">
+        <img src={w.heroImage} alt={w.heroAlt} />
+      </div>
 
       <div className="detail-meta-strip">
         <div className="dm-cell">
@@ -60,6 +65,20 @@ export default function WorkDetailPage({ params }) {
             ))}
           </ul>
         </div>
+
+        {w.gallery && w.gallery.length > 0 && (
+          <div className="fx in">
+            <h4>Visual evidence</h4>
+            {hasPlaceholders && (
+              <p style={{ marginBottom: 24 }}>
+                Real screenshots for this project are still being collected. The slots below show what will go in each spot,
+                labeled with the screenshot ID from the collection plan.
+              </p>
+            )}
+            <ProjectGallery gallery={w.gallery} />
+          </div>
+        )}
+
         <div className="fx in">
           <h4>Outcome</h4>
           <p>{w.outcome}</p>

@@ -22,7 +22,9 @@ export default function WorkList() {
       <div className="work-list">
         {filtered.map((w) => (
           <Link key={w.id} href={`/work/${w.id}`} className="work-row">
-            <div className="work-thumb-sm" style={{ background: w.color }} />
+            <div className="work-thumb-sm">
+              <img src={w.heroImage} alt={w.heroAlt} loading="lazy" />
+            </div>
             <div>
               <h3>{w.title}</h3>
               <p>{w.summary}</p>
